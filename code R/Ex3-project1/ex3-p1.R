@@ -1,0 +1,6 @@
+no.company = matrix(c(20,52,32,53,47,28,67,32,25), ncol = 3 , byrow = TRUE)
+colnames(no.company) = c("High","Moderate","Low")
+rownames(no.company) = c("Small","Medium","Large")
+no.company = as.table(no.company)
+Chi_test = chisq.test(no.company, simulate.p.value = TRUE)
+print(Chi_test)
